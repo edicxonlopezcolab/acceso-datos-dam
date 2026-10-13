@@ -38,7 +38,14 @@ public class EmpleadoController
                         gestor.exportarEnJson(empleados);
                     }
                     break;
-                
+                case 3:
+                    ArrayList<EmpleadoModel> leidos = gestor.leerDeJson();
+                    System.out.println("El fichero contiene " + leidos.size() + " empleados:");
+                    for (EmpleadoModel e : leidos)
+                    {
+                        System.out.println(e);
+                    }
+                    break;
                 case 4:
                     if(empleados.isEmpty())
                     {
